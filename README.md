@@ -1,5 +1,20 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Cart App With Next JS & React
 
+Static Site: https://cart-app-rose.vercel.app/
+
+# Features
+
+- Static Site Generation with NextJS & Vercel
+- useContext and UseReducer for global state management
+- dispatched action on homepage to add book data into global cart state so that it can be added into the cart page
+- dispatched action to clear cart from global state
+- dispatched action to remove individual cart item
+- dispatched action to increase and decrease number of items to buy in cart
+- dispatched action using useEffect to calculate total amount anytime the amount value changes
+- dynamic star component render based on rating property in book data object
+- dynamic functional components
+- styled with SASS
+- 
 ## Getting Started
 
 First, run the development server:

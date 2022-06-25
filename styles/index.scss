@@ -1,0 +1,28 @@
+@use "mixin" as mixin;
+@import "typography";
+@import "components/navbar";
+@import "components/library";
+@import "components/cart";
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  // object-fit: cover;
+  height: 100%;
+}
+
+.container {
+  max-width: mixin.rem(1400);
+  margin: 0 auto;
+  padding: 0 mixin.rem(20);
+}

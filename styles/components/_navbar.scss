@@ -1,0 +1,51 @@
+@use "../mixin" as mixin;
+
+.nav-container {
+  background-color: #f9f3ee;
+  padding: mixin.rem(20) 0;
+  margin-bottom: mixin.rem(50);
+}
+
+.nav-container .flex {
+  display: flex;
+  align-items: center;
+  gap: mixin.rem(50);
+}
+
+.nav-container .flex p {
+  opacity: 0.7;
+}
+
+.nav-container .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #312016;
+  cursor: pointer;
+}
+.cart-icon {
+  font-size: mixin.rem(30);
+  color: #cca05c;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    color: #312016;
+  }
+}
+
+.item-count {
+  position: absolute;
+  top: 0;
+  left: mixin.rem(-30);
+  background-color: white;
+  border-radius: 50%;
+  width: mixin.rem(25);
+  height: mixin.rem(25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

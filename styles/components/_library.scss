@@ -1,0 +1,46 @@
+@use "../mixin" as mixin;
+
+.filled {
+  color: goldenrod;
+}
+
+.display-book {
+  display: flex;
+  gap: mixin.rem(50);
+  &__image {
+    flex: 0.3;
+    height: mixin.rem(200);
+    width: mixin.rem(200);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex: 0.7;
+    span {
+      display: block;
+      margin-bottom: mixin.rem(10);
+      opacity: 0.8;
+    }
+
+    button {
+      margin-top: auto;
+      border: none;
+      max-width: mixin.rem(200);
+      background-color: #cca05c;
+      color: white;
+      padding: mixin.rem(20);
+      border-radius: 5%;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.library .container {
+  display: grid;
+  gap: mixin.rem(50);
+  grid-template-columns: repeat(auto-fit, minmax(mixin.rem(400), 1fr));
+}

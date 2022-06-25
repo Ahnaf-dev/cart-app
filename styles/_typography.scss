@@ -1,0 +1,17 @@
+@use "mixin" as mixins;
+@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&family=Montserrat:wght@600&display=swap");
+
+h1,
+h2,
+h3,
+h4,
+h4 {
+  font-size: mixins.rem(30);
+  font-family: "Montserrat", sans-serif;
+}
+
+p,
+a,
+span {
+  font-family: "Libre Caslon Text", serif;
+}

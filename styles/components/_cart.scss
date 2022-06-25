@@ -1,0 +1,81 @@
+@use "../mixin" as mixin;
+
+.cart {
+  overflow: hidden;
+}
+.cart .empty {
+  color: red;
+  margin-top: mixin.rem(30);
+  margin-bottom: mixin.rem(100);
+}
+.cart .cart-container {
+  padding: mixin.rem(30) 0;
+  gap: mixin.rem(50);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(mixin.rem(600), 1fr));
+  border-bottom: 2px solid rgba(0, 0, 0, 0.6);
+  margin-bottom: mixin.rem(30);
+}
+
+.cart .cart-total {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  button {
+    border: none;
+    max-width: mixin.rem(200);
+    background-color: #cca05c;
+    color: white;
+    padding: mixin.rem(20);
+    border-radius: 5%;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  p {
+    font-size: mixin.rem(40);
+    font-weight: bold;
+  }
+  // text-align: center;
+  // font-weight: bold;
+  // font-size: mixin.rem(60);
+}
+
+.remove {
+  color: red;
+  margin-bottom: mixin.rem(20);
+  cursor: pointer;
+}
+
+.cart-book {
+  position: relative;
+
+  h2 {
+    max-width: 230px;
+  }
+}
+
+.arrows {
+  font-size: mixin.rem(30);
+  position: absolute;
+  left: 70%;
+  cursor: pointer;
+  top: 0;
+  color: goldenrod;
+
+  .up {
+    margin-bottom: 10px;
+    svg:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .down {
+    svg:hover {
+      opacity: 0.8;
+    }
+  }
+}

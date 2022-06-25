@@ -14,7 +14,7 @@ Static Site: https://cart-app-rose.vercel.app/
 - dynamic star component render based on rating property in book data object
 - dynamic functional components
 - styled with SASS
-- 
+
 ## Getting Started
 
 First, run the development server:

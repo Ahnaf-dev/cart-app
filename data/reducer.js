@@ -9,9 +9,20 @@ const reducer = (state, action) => {
     return { ...state, cart: [], total: 0 };
   }
   if (action.type === "REMOVE") {
+    const arrOfNums = state.cart.map((item) => {
+      if (item.id === action.payload) {
+        return 0;
+      }
+      return +item.price * +item.amount;
+    });
+
+    const totalSum = arrOfNums.reduce((prev, current) => {
+      return prev + current;
+    }, 0);
     return {
       ...state,
       cart: [...state.cart.filter((item) => item.id !== action.payload)],
+      total: totalSum,
     };
   }
 
